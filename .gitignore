@@ -1,5 +1,22 @@
-*.exe
+# C / C++
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
 *.obj
-*.pdb
+*.o
+*.a
+*.exe
 *.out
 *.app
+*.pdb
+*.ilk
+*.user
+*.suo
+*.db
+*.opendb
+*.VC.db
+*.tlog
+*.log
+*.idb
