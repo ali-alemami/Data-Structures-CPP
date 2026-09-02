@@ -59,7 +59,7 @@ Node* FindNode(Node* Head, int Val)
 	return NULL;
 }
 
-void InseartAtBeginning(Node*& Head, int Val)
+void InsertAtBeginning(Node*& Head, int Val)
 {
 	Node* NewNode = new Node();
 
@@ -74,7 +74,7 @@ void InseartAtBeginning(Node*& Head, int Val)
 	Head = NewNode;
 }
 
-void InseartAfter(Node* PrevNode, int Val)
+void InsertAfter(Node* PrevNode, int Val)
 {
 	if (PrevNode == NULL)
 		return;
@@ -85,14 +85,13 @@ void InseartAfter(Node* PrevNode, int Val)
 	NewNode->Next = PrevNode->Next;
 	NewNode->Val = Val;
 
-	PrevNode->Next->Prev = NewNode;
-	PrevNode->Next = NewNode;
-
 	if (PrevNode->Next != NULL)
 		PrevNode->Next->Prev = NewNode;
+
+	PrevNode->Next = NewNode;
 }
 
-void InseartAtEnd(Node*& Head, int Val)
+void InsertAtEnd(Node*& Head, int Val)
 {
 	Node* NewNode = new Node();
 
@@ -175,11 +174,11 @@ int main()
 {
 	Node* Head = NULL;
 
-	InseartAtEnd(Head, 1);
-	InseartAtEnd(Head, 2);
-	InseartAtEnd(Head, 3);
-	InseartAtEnd(Head, 4);
-	InseartAtEnd(Head, 5);
+	InsertAtEnd(Head, 1);
+	InsertAtEnd(Head, 2);
+	InsertAtEnd(Head, 3);
+	InsertAtEnd(Head, 4);
+	InsertAtEnd(Head, 5);
 	
 
 	PrintLinkedList(Head);

@@ -10,7 +10,7 @@ public:
 	Node* Next;
 };
 
-void InseartInBeginning(Node*& Head, int Val)
+void InsertAtBeginning(Node*& Head, int Val)
 {
 	Node* NewNode = new Node();
 
@@ -63,7 +63,7 @@ void InsertAfter(Node* PrevNode, int Val)
 	NewNode->Value = Val;
 }
 
-void InseartAtEnd(Node*& Head, int Val)
+void InsertAtEnd(Node*& Head, int Val)
 {
 	Node* NewNode = new Node();
 
@@ -154,11 +154,11 @@ int main()
 {
 	Node* Head = NULL;
 
-	InseartAtEnd(Head, 1);
-	InseartAtEnd(Head, 2);
-	InseartAtEnd(Head, 3);
-	InseartAtEnd(Head, 4);
-	InseartAtEnd(Head, 5);
+	InsertAtEnd(Head, 1);
+	InsertAtEnd(Head, 2);
+	InsertAtEnd(Head, 3);
+	InsertAtEnd(Head, 4);
+	InsertAtEnd(Head, 5);
 
 	PrintLinkedList(Head);
 
